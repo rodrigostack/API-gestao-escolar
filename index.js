@@ -27,7 +27,7 @@ app.get('/', function(req, res){
 app.post('/api/alunos', (req, res)=>{
     const aluno = req.body.nome;
     const email = req.body.email;
-    const telefone = req.body.tel;
+    const telefone = req.body.telefone;
     const cpf = req.body.cpf;
     const curso = req.body.curso;
     const CEP = req.body.cep;
