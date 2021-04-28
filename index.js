@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
-const connection = require('./banco/connection')
+const connection = require('./banco/connection');
+const Alunos = require('./banco/Alunos')
 
 connection
     .authenticate()
