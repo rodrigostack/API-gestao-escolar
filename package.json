@@ -1,0 +1,19 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "API de dados com o banco",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "React",
+    "Nodejs",
+    "Mysql"
+  ],
+  "author": "Rodrigo Oliveira",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
