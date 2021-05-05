@@ -24,6 +24,17 @@ app.get('/', function(req, res){
     res.send('Servidor')
 })
 
+
+app.get('/api/alunoscadastrados', (req, res)=>{
+    Alunos.findAll({ raw: true }).then(alunos =>{
+        alunos: alunos
+    });
+     res.status(201).send()
+});
+
+
+
+
 app.post('/api/alunos', (req, res)=>{
     const aluno = req.body.nome;
     const email = req.body.email;
