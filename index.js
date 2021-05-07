@@ -27,9 +27,10 @@ app.get('/', function(req, res){
 
 app.get('/api/alunoscadastrados', (req, res)=>{
     Alunos.findAll({ raw: true }).then(alunos =>{
+        res.send(alunos)
         alunos: alunos
     });
-     res.status(201).send()
+    
 });
 
 
