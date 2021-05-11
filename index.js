@@ -44,6 +44,15 @@ app.post('/api/cursos', (req, res)=>{
 });
 
 
+app.get('/api/cursoscadastrados', (req, res)=>{
+    Cursos.findAll({ raw: true }).then(cursos =>{
+        res.send(cursos)
+        cursos: cursos
+    });
+    
+});
+
+
 
 
 //API para os alunos
@@ -54,7 +63,6 @@ app.get('/api/alunoscadastrados', (req, res)=>{
     });
     
 });
-
 
 
 
