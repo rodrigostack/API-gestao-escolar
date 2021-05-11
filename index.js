@@ -3,7 +3,8 @@ const app = express();
 const bodyparser = require('body-parser');
 const cors = require('cors')
 const connection = require('./banco/connection');
-const Alunos = require('./banco/Alunos')
+const Alunos = require('./banco/Alunos');
+const Cursos = require('./banco/Cursos');
 
 connection
     .authenticate()
