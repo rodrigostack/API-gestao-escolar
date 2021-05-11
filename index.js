@@ -26,6 +26,27 @@ app.get('/', function(req, res){
 })
 
 
+// API para os cursos
+app.post('/api/cursos', (req, res)=>{
+    const curso = req.body.curso;
+    const duracao = req.body.duracao;
+    const mensalidade = req.body.mensalidade;
+    const modulos = req.body.modulos;
+    
+    Cursos.create({
+        curso: curso,
+        duracao: duracao,
+        mensalidade: mensalidade,
+        modulos: modulos
+
+    })
+    res.status(201).send()
+});
+
+
+
+
+//API para os alunos
 app.get('/api/alunoscadastrados', (req, res)=>{
     Alunos.findAll({ raw: true }).then(alunos =>{
         res.send(alunos)
