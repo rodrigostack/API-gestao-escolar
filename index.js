@@ -34,7 +34,7 @@ app.post('/api/consultaalunos', (req, res)=>{
         if(alunos != undefined){
             res.status(201).send()
         }else{
-            
+            res.redirect('/') ; 
         }
     })
 })
