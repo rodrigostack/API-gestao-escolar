@@ -25,6 +25,20 @@ app.get('/', function(req, res){
     res.send('Servidor')
 })
 
+// API de consultas 
+app.post('/api/consultaalunos', (req, res)=>{
+    const id = req.body.id;
+    Alunos.findOne({
+        where: {id: id}
+    }).then(alunos => {
+        if(alunos != undefined){
+            res.status(300).send()
+        }else{
+            res.status(201).send()
+        }
+    })
+})
+
 
 // API para os cursos
 app.post('/api/cursos', (req, res)=>{
