@@ -32,7 +32,7 @@ app.post('/api/consultaalunos', (req, res)=>{
         where: {id: id}
     }).then(alunos => {
         if(alunos != undefined){
-            res.status(300).send()
+            res.redirect('/')
         }else{
             res.status(201).send()
         }
