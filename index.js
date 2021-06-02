@@ -34,7 +34,7 @@ app.get('/api/consultaalunos/:id', (req, res)=>{
         if(alunos != undefined){
             res.status(201).send(alunos)
         }else{
-            res.redirect('/') ; 
+            res.status(301).send;
         }
     })
 })
