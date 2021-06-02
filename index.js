@@ -26,8 +26,8 @@ app.get('/', function(req, res){
 })
 
 // API de consultas 
-app.post('/api/consultaalunos', (req, res)=>{
-    const id = req.body.id;
+app.get('/api/consultaalunos/:id', (req, res)=>{
+    const id = req.params.id;
     Alunos.findOne({
         where: {id: id}
     }).then(alunos => {
